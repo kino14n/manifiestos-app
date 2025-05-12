@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector de Manifiestos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Selector de Manifiestos</h1>
+    <form id="manifestForm">
+      <label for="codes">Códigos (separados por comas):</label>
+      <textarea id="codes" placeholder="Ej: 1514LG,1523C,1801G"></textarea>
+      <label for="recentDays">Días para considerar reciente:</label>
+      <input type="number" id="recentDays" value="30" min="0">
+      <label for="docsFile">Datos de manifiestos (JSON):</label>
+      <input type="file" id="docsFile" accept=".json">
+      <button type="submit">Seleccionar Manifiestos</button>
+    </form>
+    <div id="result">
+      <h2>Manifiestos Seleccionados:</h2>
+      <ul id="selectedList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
